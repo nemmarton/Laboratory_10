@@ -30,7 +30,7 @@ Example:
 int factorial(int n) {
     if (n == 0) return 1;       // base case
     return n * factorial(n-1); // recursive step
-}
+}```
 
 2. How Recursive Calls Work
 
@@ -49,7 +49,7 @@ The fucntion always work in its own block (sandpit if you like:)
 Example (factorial of 3)
 
 Call sequence:
-
+```c
 factorial(3)
  → factorial(2)
    → factorial(1)
@@ -61,7 +61,7 @@ factorial(0) returns 1
 factorial(1) returns 1 * 1 = 1
 factorial(2) returns 2 * 1 = 2
 factorial(3) returns 3 * 2 = 6
-
+```
 3. The Call Stack
 
     The call stack is a memory area that keeps track of active function calls.
@@ -82,12 +82,12 @@ factorial(3) returns 3 * 2 = 6
     Some compilers can optimize tail recursion to avoid creating new stack frames.
 
 Example:
-
+```c
 int factorial_tail(int n, int acc) {
     if (n == 0) return acc;
     return factorial_tail(n-1, n*acc);  // tail recursive
 }
-
+```
 5. Common Pitfalls
 
     Missing base case → infinite recursion, stack overflow.
